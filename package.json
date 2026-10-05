@@ -1,0 +1,48 @@
+{
+  "name": "pi-auto-retry-all",
+  "version": "1.0.0",
+  "description": "Automatic retry extension for Pi Coding Agent that seamlessly intercepts and retries ALL transient LLM errors (EOF, timeout, connection drops, API errors) without adding duplicate user messages.",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "author": "ptbsare",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ptbsare/pi-auto-retry-all.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ptbsare/pi-auto-retry-all/issues"
+  },
+  "homepage": "https://github.com/ptbsare/pi-auto-retry-all#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "extension",
+    "auto-retry",
+    "error-recovery",
+    "agent"
+  ],
+  "files": [
+    "index.ts",
+    "README.md",
+    "README_zh.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=0.84.1"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.87.1",
+    "typescript": "^5.8.0"
+  }
+}
